@@ -1,6 +1,9 @@
 
 # react-native-webviewx5
-
+将安卓中webview浏览器内核替换为腾讯X5内核并保留react-native-webview中各种API
+可以优化Android版本低而使浏览器内核webveiw不正常显示，同时使用腾讯X5方便扩展，
+总之，等于使用腾讯浏览器打开webview页面。
+其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.67_43967。
 ## Getting started
 
 `$ npm install react-native-webviewx5 --save`
@@ -13,11 +16,7 @@
 
 
 #### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-webviewx5` and add `RNWebviewx5.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNWebviewx5.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+暂不支持IOS，有需要可对照Android实现
 
 #### Android
 
@@ -37,9 +36,9 @@
 
 ## Usage
 ```javascript
-import RNWebviewx5 from 'react-native-webviewx5';
+import { WebView } from 'react-native-webviewx5';
 
-// TODO: What to do with the module?
-RNWebviewx5;
+<WebView
+    source={{ uri: 'https://www.bilibili.com/' }}/>
 ```
   
