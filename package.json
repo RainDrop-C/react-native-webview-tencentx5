@@ -1,15 +1,14 @@
 {
   "name": "react-native-webviewx5",
-  "description": "React Native WebView component for iOS, Android, macOS, and Windows",
+  "description": "React Native WebView component for Android, Use Tencent TBSX5",
   "main": "index.js",
   "typings": "index.d.ts",
-  "author": "Jamon Holmgren <jamon@infinite.red>",
-  "contributors": [
-    "Thibault Malbranche <malbranche.thibault@gmail.com>"
-  ],
+  "author": {
+    "name": "fanwei",
+    "email": "353144270@qq.com"
+  },
   "license": "MIT",
-  "version": "10.9.3",
-  "homepage": "https://github.com/react-native-community/react-native-webview#readme",
+  "version": "1.0.0",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "start:android": "react-native run-android",
@@ -74,17 +73,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-community/react-native-webview.git"
+    "url": "https://github.com/RainDrop-C/react-native-webviewx5.git"
   },
   "files": [
     "android",
-    "apple",
     "ios",
-    "macos",
-    "windows",
     "lib",
     "index.js",
-    "index.d.ts",
-    "react-native-webview.podspec"
+    "index.d.ts"
   ]
 }
