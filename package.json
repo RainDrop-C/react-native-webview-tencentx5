@@ -1,10 +1,10 @@
 {
-  "name": "react-native-webviewx5",
+  "name": "react-native-webview-tencentx5",
   "description": "React Native WebView component for Android, Use Tencent TBSX5",
   "main": "index.js",
   "typings": "index.d.ts",
   "author": {
-    "name": "fanwei",
+    "name": "raindrop-c",
     "email": "353144270@qq.com"
   },
   "license": "MIT",
@@ -16,12 +16,7 @@
     "start:macos": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-macos",
     "start:windows": "react-native start --use-react-native-windows",
     "ci": "CI=true && yarn lint",
-    "ci:publish": "yarn semantic-release",
-    "lint": "yarn tsc --noEmit && yarn eslint ./src --ext .ts,.tsx",
-    "build": "yarn tsc",
-    "prepare": "yarn build",
-    "appium": "appium",
-    "test:windows": "yarn jest --setupFiles=./jest-setups/jest.setup.windows.js"
+    "ci:publish": "yarn semantic-release"
   },
   "rn-docs": {
     "title": "Webview",
@@ -73,7 +68,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RainDrop-C/react-native-webviewx5.git"
+    "url": "https://github.com/RainDrop-C/react-native-webview-tencentx5.git"
   },
   "files": [
     "android",
