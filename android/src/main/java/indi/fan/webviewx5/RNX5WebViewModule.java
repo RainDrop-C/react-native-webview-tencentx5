@@ -42,9 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static android.app.Activity.RESULT_OK;
 
-@ReactModule(name = RNCWebViewModule.MODULE_NAME)
-public class RNCWebViewModule extends ReactContextBaseJavaModule implements ActivityEventListener {
-  public static final String MODULE_NAME = "RNCWebView";
+@ReactModule(name = RNX5WebViewModule.MODULE_NAME)
+public class RNX5WebViewModule extends ReactContextBaseJavaModule implements ActivityEventListener {
+  public static final String MODULE_NAME = "RNX5WebView";
   private static final int PICKER = 1;
   private static final int PICKER_LEGACY = 3;
   private static final int FILE_DOWNLOAD_PERMISSION_REQUEST = 1;
@@ -115,7 +115,7 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
     }
   };
 
-  public RNCWebViewModule(ReactApplicationContext reactContext) {
+  public RNX5WebViewModule(ReactApplicationContext reactContext) {
     super(reactContext);
     reactContext.addActivityEventListener(this);
   }
@@ -263,7 +263,7 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
     if (chooserIntent.resolveActivity(getCurrentActivity().getPackageManager()) != null) {
       getCurrentActivity().startActivityForResult(chooserIntent, PICKER_LEGACY);
     } else {
-      Log.w("RNCWebViewModule", "there is no Activity to handle this Intent");
+      Log.w("RNX5WebViewModule", "there is no Activity to handle this Intent");
     }
   }
 
@@ -296,7 +296,7 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
     if (chooserIntent.resolveActivity(getCurrentActivity().getPackageManager()) != null) {
       getCurrentActivity().startActivityForResult(chooserIntent, PICKER);
     } else {
-      Log.w("RNCWebViewModule", "there is no Activity to handle this Intent");
+      Log.w("RNX5WebViewModule", "there is no Activity to handle this Intent");
     }
 
     return true;

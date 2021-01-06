@@ -3,7 +3,7 @@
           package="indi.fan.webviewx5">
     <application>
         <provider
-        android:name=".RNCWebViewFileProvider"
+        android:name=".RNX5WebViewFileProvider"
         android:authorities="${applicationId}.fileprovider"
         android:exported="false"
         android:grantUriPermissions="true">
