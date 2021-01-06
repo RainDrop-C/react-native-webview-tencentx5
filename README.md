@@ -1,9 +1,9 @@
 
 # react-native-webview-tencentx5
 将安卓中webview浏览器内核替换为[腾讯X5内核](https://x5.tencent.com/docs/index.html)并保留[react-native-webview](https://github.com/react-native-webview/react-native-webview)中各种[API](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)
-可以优化Android版本低而使浏览器内核webveiw不正常显示，同时使用腾讯X5方便扩展，
-总之，等于使用腾讯浏览器打开webview页面。
-其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.67_43967。
+可以优化Android版本低而使浏览器内核webveiw不正常显示，同时使用腾讯X5方便扩展。<br/>
+总之，等于使用腾讯浏览器打开webview页面。<br/>
+其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.67_43967。<br/>
 ## Getting started
 
 `$ npm install react-native-webview-tencentx5 --save`
@@ -32,6 +32,14 @@
   	```
       compile project(':react-native-webview-tencentx5')
   	```
+为了保障X5内核的动态下发和正常使用，您需要在您的AndroidManifest.xml增加如下权限:
+```xml
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+```
 
 
 ## Usage
