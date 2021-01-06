@@ -1,16 +1,16 @@
 
-# react-native-webviewx5
-将安卓中webview浏览器内核替换为腾讯X5内核并保留react-native-webview中各种API
+# react-native-webview-tencentx5
+将安卓中webview浏览器内核替换为[腾讯X5内核](https://x5.tencent.com/docs/index.html)并保留[react-native-webview](https://github.com/react-native-webview/react-native-webview)中各种[API](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)
 可以优化Android版本低而使浏览器内核webveiw不正常显示，同时使用腾讯X5方便扩展，
 总之，等于使用腾讯浏览器打开webview页面。
 其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.67_43967。
 ## Getting started
 
-`$ npm install react-native-webviewx5 --save`
+`$ npm install react-native-webview-tencentx5 --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-webviewx5`
+`$ react-native link react-native-webview-tencentx5`
 
 ### Manual installation
 
@@ -25,18 +25,18 @@
   - Add `new RNWebviewx5Package()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-webviewx5'
-  	project(':react-native-webviewx5').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-webviewx5/android')
+  	include ':react-native-webview-tencentx5'
+  	project(':react-native-webview-tencentx5').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-webview-tencentx5/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-webviewx5')
+      compile project(':react-native-webview-tencentx5')
   	```
 
 
 ## Usage
 ```javascript
-import { WebView } from 'react-native-webviewx5';
+import { WebView } from 'react-native-webview-tencentx5';
 
 <WebView
     source={{ uri: 'https://www.bilibili.com/' }}/>
