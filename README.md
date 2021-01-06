@@ -1,6 +1,6 @@
 
 # react-native-webview-tencentx5
-将安卓中webview浏览器内核替换为[腾讯X5内核](https://x5.tencent.com/docs/index.html)并保留[react-native-webview](https://github.com/react-native-webview/react-native-webview)中各种[API](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)
+将安卓中webview浏览器内核替换为[腾讯X5内核](https://x5.tencent.com/docs/index.html)并保留[react-native-webview](https://github.com/react-native-webview/react-native-webview)中各种[API](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)。<br/>
 可以优化Android版本低而使浏览器内核webveiw不正常显示，同时使用腾讯X5方便扩展。<br/>
 总之，等于使用腾讯浏览器打开webview页面。<br/>
 其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.67_43967。<br/>
@@ -8,9 +8,13 @@
 
 `$ npm install react-native-webview-tencentx5 --save`
 
+or
+
+`$ yarn add react-native-webview-tencentx5`
+
 ### Mostly automatic installation
 
-`$ react-native link react-native-webview-tencentx5`
+Since React Native 0.60 and higher, [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) makes the installation process simpler.
 
 ### Manual installation
 
@@ -19,19 +23,6 @@
 暂不支持IOS，有需要可对照Android实现
 
 #### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import in.fan.webviewx5.RNWebviewx5Package;` to the imports at the top of the file
-  - Add `new RNWebviewx5Package()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-webview-tencentx5'
-  	project(':react-native-webview-tencentx5').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-webview-tencentx5/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-webview-tencentx5')
-  	```
 为了保障X5内核的动态下发和正常使用，您需要在您的AndroidManifest.xml增加如下权限:
 ```xml
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -40,13 +31,20 @@
       <uses-permission android:name="android.permission.INTERNET" />
       <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
+## Troubleshooting
 
+### The following situations are not errors
+- 首次加载成功后，可能依旧为原始内核，等待X5内核下载启动，往后都可正常使用
+- 首次加载可能会出现卡顿白屏现象
+- 请注意X5内核运行环境在模拟器下的影响，请使用真机调试
 
 ## Usage
 ```javascript
 import { WebView } from 'react-native-webview-tencentx5';
 
 <WebView
-    source={{ uri: 'https://www.bilibili.com/' }}/>
+    source={{ uri: 'https://www.bilibili.com/' }}
+    ...
+    />
 ```
   
