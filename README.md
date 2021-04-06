@@ -3,7 +3,7 @@
 将安卓中webview浏览器内核替换为[腾讯X5内核](https://x5.tencent.com/docs/index.html)并保留[react-native-webview](https://github.com/react-native-webview/react-native-webview)中各种[API](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)。<br/>
 可以优化Android版本低而使浏览器内核webveiw不正常显示，同时使用腾讯X5方便扩展。<br/>
 总之，等于使用腾讯浏览器打开webview页面。<br/>
-其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.67_43967。<br/>
+其中react-native-webview的API支持版本为v10.9.3，X5内核版本SDK为v4.3.0.93_43993。<br/>
 ## Getting started
 
 `$ npm install react-native-webview-tencentx5 --save`
@@ -20,7 +20,7 @@ Since React Native 0.60 and higher, [autolinking](https://github.com/react-nativ
 
 
 #### iOS
-暂不支持IOS，有需要可对照Android实现
+`$ cd ios && pod install`
 
 #### Android
 为了保障X5内核的动态下发和正常使用，您需要在您的AndroidManifest.xml增加如下权限:
